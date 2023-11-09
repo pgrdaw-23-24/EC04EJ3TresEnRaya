@@ -1,0 +1,8 @@
+3.EJERCICIO 3: TRES EN RALLA
+Implementa un módulo para jugar al tres en ralla mediante clases y/u objetos. Debe tener una
+función para jugar donde se le indique la posición a jugar. El juego debe recordar el turno, de modo
+que a la hora de jugar sólo se indicará dónde, no quién juega.
+Cuando se introduzca una jugada inválida, el juego lanzará una excepción.
+Debe haber algún método para comprobar si el juego ha finalizado y quién es el ganador, así como
+para imprimir el estado del juego.
+El módulo del tres en ralla no puede imprimir nada por consola.
