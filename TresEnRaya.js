@@ -32,13 +32,19 @@ function comprobarVerticales(tablero) {
     return false
 }
 
-function comprobarDiagonales(tablero) {
+function comprobarDiagonal1(tablero) {
     for (let d = 0; d <= 2; d++) {
         if (tablero[0][0] != '·' &&
             tablero[0][0] == tablero[1][1] &&
             tablero[1][1] == tablero[2][2]) {
             return true
         }
+    }
+    return false
+}
+
+function comprobarDiagonal2(tablero) {
+    for (let d = 0; d <= 2; d++) {
         if (tablero[2][0] != '·' &&
             tablero[2][0] == tablero[1][1] &&
             tablero[1][1] == tablero[0][2]) {
@@ -87,7 +93,8 @@ class TresEnRaya {
     comprobarFinalizado() {
         if (comprobarHorizontales(this.tablero) ||
             comprobarVerticales(this.tablero) ||
-            comprobarDiagonales(this.tablero)) {
+            comprobarDiagonal1(this.tablero) ||
+            comprobarDiagonal2(this.tablero)) {
             this.ganador = this.jugador
             return true
         } else {
