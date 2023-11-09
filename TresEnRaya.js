@@ -54,14 +54,14 @@ class TresEnRaya {
     constructor() {
         this.tablero = [['·', '·', '·'], ['·', '·', '·'], ['·', '·', '·']]
         this.jugador = 'O'
+        this.ganador = ''
     }
 
     jugar(fila, columna) {
         comprobarLimites(fila, columna)
         comprobarVacio(fila, columna, this.tablero)
-        this.tablero[fila][columna] = this.jugador
         this.turno()
-        this.finalizado()
+        this.tablero[fila][columna] = this.jugador
     }
 
     turno() {
@@ -84,11 +84,11 @@ class TresEnRaya {
         return estado
     }
 
-    finalizado() {
+    comprobarFinalizado() {
         if (comprobarHorizontales(this.tablero) ||
-            comprobarVerticales(this.tablero) || 
-            comprobarDiagonales(this.tablero))
-        {
+            comprobarVerticales(this.tablero) ||
+            comprobarDiagonales(this.tablero)) {
+            this.ganador = this.jugador
             return true
         } else {
             return false
