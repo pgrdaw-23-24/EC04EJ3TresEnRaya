@@ -54,7 +54,6 @@ function comprobarDiagonal2(tablero) {
     return false
 }
 
-
 class TresEnRaya {
 
     constructor() {

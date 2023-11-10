@@ -22,6 +22,3 @@ function partidaAutomatica() {
 }
 
 partidaAutomatica()
-
-
-
